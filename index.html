@@ -17,8 +17,8 @@
           </form>
          
           <div class="keypad">
-            <button class="gray" id="clear" onclick="allclear()">AC</button>
-            <button class="gray" id="backspace">±</button>
+            <button class="gray" onclick="clears()">AC</button>
+            <button class="gray" id="backspace" onclick="addsub()">±</button>
             <button id='btn' class="number gray" >%</button>
             <button id='btn' class="number yellow" >&divide;</button>
             <button id='btn' class="number">7</button>
@@ -35,30 +35,20 @@
             <button id='btn' class="number yellow" >+</button>
             <button id='btn' class="number" id="zero">0</button>
             <button id='btn' class="number">.</button>
-            <button id='btn' class="yellow" id="res" onclick="eval()">=</button>
+            <button id='btn' class="yellow" id="res" onclick="result()">=</button>
           </div>
+     </div>
+          
 
           <script>
-            //   let num = document.querySelectorAll('#res');
-            //   let show=document.getElementById('display')
+  
 
-            //   num.addEventListener('click',cal);
-
-            //   function cal(){
-            //       alert("helloword")
-
-            //   }
-
-                // let btns = document.getElementById("btn")
-                // btns.addEventListener('click',function(){
-                //     alert('hi');
-                // });
                 let output=document.getElementById('display')
                 let input=document.getElementById('btn')
                 btns = document.getElementsByClassName("number");
                 for (var i = 0; i < btns.length; i++) 
 
-                btns[i].addEventListener("click", function cal (e) {
+                btns[i].addEventListener("click", function cal(e) {
                 
                   // input.value=output.innerHTML
                   output.value +=e.target.innerHTML;
@@ -67,17 +57,21 @@
                 
                 });
                 
-                function allclear(){
+                function clears(){
+                  // alert('kkk')
                   output.value="";
         
                 }
-                function eval(){
-                  val:output.value
-                }
               
-          </script>
+                function addsub(){
+                  output.value *= '-1';
+                }
+                function result(){
+                  output.value=eval(output.value)
+                }
+            
+              </script>
 
-        </div>
 
 
        

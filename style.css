@@ -19,9 +19,8 @@ body {
     grid-gap: 10px;
 
 }
-#display{
-    border: 1px solid greenyellow;
-}
+
+
 input[type='text'] {
     height: 200px;
     width: 300px;
@@ -59,6 +58,7 @@ button:hover {
 .yellow {
     background-color: #FDA03B;
 }
+
 .gray {
     background-color: #A5A5A5;
     color:black;
@@ -76,7 +76,13 @@ button:hover {
 .menu img {
     height: 15px;
 }
-@media (max-width:600px) {
+#res{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    background-color: red;
+}
+/* @media (max-width:600px) {
     .container {
         width: 85%;
         height: 94vh;
@@ -111,4 +117,4 @@ button:hover {
         
     }
     
-  }
+  } */
